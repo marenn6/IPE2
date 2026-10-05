@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -13,9 +13,9 @@
 
     <style>
 
-        /* -------------------------
+        /* =========================
            ESTILOS GENERALES
-        ------------------------- */
+        ========================= */
 
         * {
             margin: 0;
@@ -23,41 +23,96 @@
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
 
+
         body {
             font-family: Arial, sans-serif;
-            background-color: #fff5f8;
+
             color: #333;
+
+            /* FONDO ROSA CLARO */
+            background-color: #ffeef4;
+
+            /*
+               ESTAMPADO DE LEOPARDO
+               EN ROSA CLARO
+            */
+
+            background-image:
+                radial-gradient(
+                    ellipse at center,
+                    transparent 25%,
+                    #eeb0c4 26%,
+                    #eeb0c4 34%,
+                    transparent 35%
+                ),
+
+                radial-gradient(
+                    ellipse at center,
+                    transparent 25%,
+                    #f4bfd1 26%,
+                    #f4bfd1 34%,
+                    transparent 35%
+                ),
+
+                radial-gradient(
+                    circle at center,
+                    #f8cedc 0%,
+                    #f8cedc 18%,
+                    transparent 19%
+                );
+
+            background-size:
+                100px 100px,
+                130px 130px,
+                110px 110px;
+
+            background-position:
+                0 0,
+                45px 55px,
+                20px 20px;
+
+            background-attachment: fixed;
         }
 
 
-        /* -------------------------
+        /* =========================
            MENÚ
-        ------------------------- */
+        ========================= */
 
         header {
-            background-color: #ffffff;
+
+            background-color: rgba(255, 255, 255, 0.94);
+
             padding: 20px 8%;
 
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
 
             position: sticky;
+
             top: 0;
 
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+            box-shadow:
+                0 3px 15px rgba(0, 0, 0, 0.08);
 
             z-index: 1000;
         }
 
 
         .logo {
+
             font-size: 25px;
+
             font-weight: bold;
+
             color: #d94f82;
 
             transition: 0.3s;
@@ -65,13 +120,17 @@
 
 
         .logo:hover {
+
             color: #a82f5c;
+
             transform: scale(1.08);
         }
 
 
         nav a {
+
             text-decoration: none;
+
             color: #333;
 
             margin-left: 25px;
@@ -83,39 +142,58 @@
 
 
         nav a:hover {
+
             color: #d94f82;
+
+            transform: translateY(-2px);
         }
 
 
-        /* -------------------------
+        /* =========================
            INICIO
-        ------------------------- */
+        ========================= */
 
         #inicio {
+
             min-height: 90vh;
 
             display: flex;
+
             justify-content: center;
+
             align-items: center;
 
             text-align: center;
 
             padding: 40px;
 
-            background: linear-gradient(
-                135deg,
-                #fff5f8,
-                #ffd6e4
-            );
+            /*
+               CAPA BLANCA TRANSPARENTE
+               PARA QUE SE VEA EL LEOPARDO
+            */
+
+            background-color: rgba(255, 240, 246, 0.75);
         }
 
 
         .inicio-contenido {
+
             max-width: 800px;
+
+            background-color:
+                rgba(255, 255, 255, 0.82);
+
+            padding: 50px;
+
+            border-radius: 30px;
+
+            box-shadow:
+                0 15px 40px rgba(217, 79, 130, 0.15);
         }
 
 
         .inicio-contenido h1 {
+
             font-size: 60px;
 
             color: #d94f82;
@@ -127,12 +205,15 @@
 
 
         .inicio-contenido h1:hover {
+
             transform: scale(1.05);
+
             color: #b73567;
         }
 
 
         .inicio-contenido h2 {
+
             font-size: 28px;
 
             margin-bottom: 20px;
@@ -142,6 +223,7 @@
 
 
         .inicio-contenido p {
+
             font-size: 18px;
 
             line-height: 1.7;
@@ -150,9 +232,12 @@
         }
 
 
-        /* BOTÓN */
+        /* =========================
+           BOTÓN
+        ========================= */
 
         .boton {
+
             display: inline-block;
 
             margin-top: 30px;
@@ -174,24 +259,29 @@
 
 
         .boton:hover {
+
             background-color: #b73567;
 
             transform: translateY(-5px);
 
-            box-shadow: 0 10px 20px rgba(217, 79, 130, 0.3);
+            box-shadow:
+                0 10px 20px
+                rgba(217, 79, 130, 0.3);
         }
 
 
-        /* -------------------------
+        /* =========================
            SECCIONES
-        ------------------------- */
+        ========================= */
 
         section {
+
             padding: 80px 10%;
         }
 
 
         .titulo {
+
             text-align: center;
 
             font-size: 38px;
@@ -202,18 +292,21 @@
         }
 
 
-        /* -------------------------
+        /* =========================
            SOBRE MÍ
-        ------------------------- */
+        ========================= */
 
         #sobre-mi {
-            background-color: white;
+
+            background-color:
+                rgba(255, 255, 255, 0.90);
 
             text-align: center;
         }
 
 
         .sobre-mi {
+
             max-width: 800px;
 
             margin: auto;
@@ -223,24 +316,30 @@
             line-height: 1.8;
 
             color: #555;
+
+            transition: 0.3s;
         }
 
 
         .sobre-mi:hover {
+
             color: #333;
         }
 
 
-        /* -------------------------
+        /* =========================
            HABILIDADES
-        ------------------------- */
+        ========================= */
 
         #habilidades {
-            background-color: #fff5f8;
+
+            background-color:
+                rgba(255, 245, 248, 0.80);
         }
 
 
         .habilidades {
+
             display: flex;
 
             justify-content: center;
@@ -252,7 +351,9 @@
 
 
         .habilidad {
-            background-color: white;
+
+            background-color:
+                rgba(255, 255, 255, 0.94);
 
             width: 220px;
 
@@ -262,22 +363,30 @@
 
             border-radius: 20px;
 
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            box-shadow:
+                0 5px 20px
+                rgba(0, 0, 0, 0.08);
 
             transition: 0.3s;
         }
 
 
         .habilidad:hover {
-            transform: translateY(-10px);
 
-            box-shadow: 0 15px 30px rgba(217, 79, 130, 0.25);
+            transform:
+                translateY(-10px)
+                scale(1.03);
+
+            box-shadow:
+                0 15px 30px
+                rgba(217, 79, 130, 0.25);
 
             background-color: #fff0f5;
         }
 
 
         .habilidad h3 {
+
             color: #d94f82;
 
             margin-bottom: 15px;
@@ -287,22 +396,26 @@
 
 
         .habilidad p {
+
             color: #666;
 
             line-height: 1.5;
         }
 
 
-        /* -------------------------
+        /* =========================
            PROYECTOS
-        ------------------------- */
+        ========================= */
 
         #proyectos {
-            background-color: white;
+
+            background-color:
+                rgba(255, 255, 255, 0.90);
         }
 
 
         .proyectos {
+
             display: flex;
 
             justify-content: center;
@@ -314,13 +427,15 @@
 
 
         .proyecto {
+
             width: 300px;
 
             padding: 30px;
 
             border-radius: 20px;
 
-            background-color: #fff5f8;
+            background-color:
+                rgba(255, 245, 248, 0.95);
 
             border: 2px solid transparent;
 
@@ -329,15 +444,21 @@
 
 
         .proyecto:hover {
-            transform: translateY(-10px) scale(1.02);
+
+            transform:
+                translateY(-10px)
+                scale(1.02);
 
             border-color: #d94f82;
 
-            box-shadow: 0 15px 30px rgba(217, 79, 130, 0.2);
+            box-shadow:
+                0 15px 30px
+                rgba(217, 79, 130, 0.20);
         }
 
 
         .proyecto h3 {
+
             color: #d94f82;
 
             margin-bottom: 15px;
@@ -347,6 +468,7 @@
 
 
         .proyecto p {
+
             line-height: 1.6;
 
             color: #555;
@@ -354,6 +476,7 @@
 
 
         .proyecto a {
+
             display: inline-block;
 
             margin-top: 20px;
@@ -369,22 +492,26 @@
 
 
         .proyecto a:hover {
+
             color: #9e2853;
 
             transform: translateX(5px);
         }
 
 
-        /* -------------------------
+        /* =========================
            FORMACIÓN
-        ------------------------- */
+        ========================= */
 
         #formacion {
-            background-color: #fff5f8;
+
+            background-color:
+                rgba(255, 245, 248, 0.80);
         }
 
 
         .formacion {
+
             max-width: 800px;
 
             margin: auto;
@@ -392,7 +519,9 @@
 
 
         .estudio {
-            background-color: white;
+
+            background-color:
+                rgba(255, 255, 255, 0.94);
 
             padding: 25px;
 
@@ -407,31 +536,38 @@
 
 
         .estudio:hover {
+
             transform: translateX(10px);
 
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            box-shadow:
+                0 8px 20px
+                rgba(0, 0, 0, 0.08);
         }
 
 
         .estudio h3 {
+
             color: #d94f82;
 
             margin-bottom: 10px;
         }
 
 
-        /* -------------------------
+        /* =========================
            CONTACTO
-        ------------------------- */
+        ========================= */
 
         #contacto {
-            background-color: white;
+
+            background-color:
+                rgba(255, 255, 255, 0.90);
 
             text-align: center;
         }
 
 
         .contacto-texto {
+
             font-size: 18px;
 
             line-height: 2;
@@ -441,17 +577,33 @@
 
 
         .contacto-texto span {
+
             color: #d94f82;
 
             font-weight: bold;
         }
 
 
-        /* -------------------------
+        .contacto-texto p {
+
+            transition: 0.3s;
+        }
+
+
+        .contacto-texto p:hover {
+
+            transform: scale(1.05);
+
+            color: #d94f82;
+        }
+
+
+        /* =========================
            FOOTER
-        ------------------------- */
+        ========================= */
 
         footer {
+
             background-color: #d94f82;
 
             color: white;
@@ -463,39 +615,59 @@
 
 
         footer p {
+
             transition: 0.3s;
         }
 
 
         footer p:hover {
+
             transform: scale(1.05);
         }
 
 
-        /* -------------------------
-           MÓVIL
-        ------------------------- */
+        /* =========================
+           RESPONSIVE
+        ========================= */
 
         @media (max-width: 700px) {
 
             header {
+
                 flex-direction: column;
 
                 gap: 15px;
             }
 
 
+            nav {
+
+                text-align: center;
+            }
+
+
             nav a {
+
                 margin: 8px;
+
+                display: inline-block;
+            }
+
+
+            .inicio-contenido {
+
+                padding: 30px 20px;
             }
 
 
             .inicio-contenido h1 {
+
                 font-size: 42px;
             }
 
 
             .inicio-contenido h2 {
+
                 font-size: 22px;
             }
 
@@ -509,12 +681,14 @@
 <body>
 
 
-    <!-- MENÚ -->
+    <!-- =========================
+         MENÚ
+    ========================= -->
 
     <header>
 
         <div class="logo">
-            Maren
+            Maren 
         </div>
 
 
@@ -538,15 +712,23 @@
 
 
 
-    <!-- INICIO -->
+    <!-- =========================
+         INICIO
+    ========================= -->
 
     <section id="inicio">
 
         <div class="inicio-contenido">
 
-            <h1>Hola, soy Maren </h1>
+            <h1>
+                Hola, soy Maren 
+            </h1>
 
-            <h2>Estudiante de Desarrollo de Aplicaciones Multiplataforma</h2>
+
+            <h2>
+                Estudiante de Desarrollo de Aplicaciones Multiplataforma
+            </h2>
+
 
             <p>
                 Me apasiona la programación, aprender nuevas tecnologías
@@ -564,7 +746,9 @@
 
 
 
-    <!-- SOBRE MÍ -->
+    <!-- =========================
+         SOBRE MÍ
+    ========================= -->
 
     <section id="sobre-mi">
 
@@ -581,7 +765,9 @@
                 desarrollo web.
             </p>
 
+
             <br>
+
 
             <p>
                 Me considero una persona curiosa, creativa y con ganas
@@ -595,7 +781,9 @@
 
 
 
-    <!-- HABILIDADES -->
+    <!-- =========================
+         HABILIDADES
+    ========================= -->
 
     <section id="habilidades">
 
@@ -609,7 +797,9 @@
 
             <div class="habilidad">
 
-                <h3>☕ Java</h3>
+                <h3>
+                    ☕ Java
+                </h3>
 
                 <p>
                     Programación orientada a objetos y desarrollo
@@ -619,9 +809,12 @@
             </div>
 
 
+
             <div class="habilidad">
 
-                <h3>🐍 Python</h3>
+                <h3>
+                    🐍 Python
+                </h3>
 
                 <p>
                     Algoritmos, programación y resolución
@@ -631,9 +824,12 @@
             </div>
 
 
+
             <div class="habilidad">
 
-                <h3>🗄️ SQL</h3>
+                <h3>
+                    🗄️ SQL
+                </h3>
 
                 <p>
                     Consultas, bases de datos, funciones y
@@ -643,9 +839,12 @@
             </div>
 
 
+
             <div class="habilidad">
 
-                <h3>🌐 HTML & CSS</h3>
+                <h3>
+                    🌐 HTML & CSS
+                </h3>
 
                 <p>
                     Creación y diseño de páginas web.
@@ -654,9 +853,12 @@
             </div>
 
 
+
             <div class="habilidad">
 
-                <h3>💻 C / C++</h3>
+                <h3>
+                    💻 C / C++
+                </h3>
 
                 <p>
                     Fundamentos de programación y estructuras.
@@ -665,9 +867,12 @@
             </div>
 
 
+
             <div class="habilidad">
 
-                <h3>🔧 GitHub</h3>
+                <h3>
+                    🔧 GitHub
+                </h3>
 
                 <p>
                     Control de versiones y organización
@@ -676,13 +881,16 @@
 
             </div>
 
+
         </div>
 
     </section>
 
 
 
-    <!-- PROYECTOS -->
+    <!-- =========================
+         PROYECTOS
+    ========================= -->
 
     <section id="proyectos">
 
@@ -696,7 +904,9 @@
 
             <div class="proyecto">
 
-                <h3>☕ Aplicación Java</h3>
+                <h3>
+                    ☕ Aplicación Java
+                </h3>
 
                 <p>
                     Proyecto desarrollado en Java aplicando
@@ -710,9 +920,12 @@
             </div>
 
 
+
             <div class="proyecto">
 
-                <h3>🗄️ Base de datos</h3>
+                <h3>
+                    🗄️ Base de datos
+                </h3>
 
                 <p>
                     Proyecto realizado con SQL utilizando
@@ -726,9 +939,12 @@
             </div>
 
 
+
             <div class="proyecto">
 
-                <h3>🌸 Página web</h3>
+                <h3>
+                    🌸 Página web
+                </h3>
 
                 <p>
                     Página web desarrollada utilizando HTML
@@ -748,7 +964,9 @@
 
 
 
-    <!-- FORMACIÓN -->
+    <!-- =========================
+         FORMACIÓN
+    ========================= -->
 
     <section id="formacion">
 
@@ -762,7 +980,9 @@
 
             <div class="estudio">
 
-                <h3>🎓 Desarrollo de Aplicaciones Multiplataforma</h3>
+                <h3>
+                    🎓 Desarrollo de Aplicaciones Multiplataforma
+                </h3>
 
                 <p>
                     Formación Profesional de Grado Superior — DAM
@@ -771,9 +991,12 @@
             </div>
 
 
+
             <div class="estudio">
 
-                <h3>📚 Bachillerato científico-biológico</h3>
+                <h3>
+                    📚 Bachillerato científico-biológico
+                </h3>
 
                 <p>
                     Formación previa a los estudios de Desarrollo
@@ -789,7 +1012,9 @@
 
 
 
-    <!-- CONTACTO -->
+    <!-- =========================
+         CONTACTO
+    ========================= -->
 
     <section id="contacto">
 
@@ -801,15 +1026,20 @@
         <div class="contacto-texto">
 
             <p>
-                📧 <span>Email:</span> marencervo@centroseim.es
+                📧 <span>Email:</span>
+                marencervo@centroseim.es
             </p>
 
-            <p>
-                💻 <span>GitHub:</span> github.com/marenn6
-            </p>
 
             <p>
-                📍 <span>Ubicación:</span> Donostia
+                💻 <span>GitHub:</span>
+                github.com/marenn6
+            </p>
+
+
+            <p>
+                📍 <span>Ubicación:</span>
+                Donostia
             </p>
 
         </div>
@@ -818,12 +1048,14 @@
 
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
     <footer>
 
         <p>
-            © 2026 Maren · Portfolio de estudiante DAM 
+            © 2026 Maren · Portfolio de estudiante DAM 💗
         </p>
 
     </footer>
