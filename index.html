@@ -3,405 +3,766 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mi Portfolio | Estudiante DAM</title>
+    <title>Portfolio | Estudiante DAM</title>
+
 
     <style>
+
+        /* -------------------------
+           ESTILOS GENERALES
+        ------------------------- */
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
+            font-family: Arial, sans-serif;
             background-color: #fff5f8;
             color: #333;
         }
 
-        /* CABECERA */
+
+        /* -------------------------
+           MENÚ
+        ------------------------- */
 
         header {
-            background-color: #f7b6ca;
-            padding: 20px 60px;
+            background-color: #ffffff;
+            padding: 20px 8%;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
+
             position: sticky;
             top: 0;
+
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+
+            z-index: 1000;
         }
 
-        header h1 {
-            color: #ffffff;
-            font-size: 28px;
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #d94f82;
+
+            transition: 0.3s;
         }
+
+
+        .logo:hover {
+            color: #a82f5c;
+            transform: scale(1.08);
+        }
+
 
         nav a {
-            color: #ffffff;
             text-decoration: none;
+            color: #333;
+
             margin-left: 25px;
+
             font-weight: bold;
+
+            transition: 0.3s;
         }
+
 
         nav a:hover {
-            color: #7d3853;
+            color: #d94f82;
         }
 
-        /* PRESENTACIÓN */
 
-        .inicio {
-            min-height: 85vh;
+        /* -------------------------
+           INICIO
+        ------------------------- */
+
+        #inicio {
+            min-height: 90vh;
+
             display: flex;
             justify-content: center;
             align-items: center;
+
             text-align: center;
+
             padding: 40px;
+
+            background: linear-gradient(
+                135deg,
+                #fff5f8,
+                #ffd6e4
+            );
         }
+
 
         .inicio-contenido {
-            max-width: 750px;
+            max-width: 800px;
         }
 
-        .inicio h2 {
-            font-size: 50px;
-            color: #d45d87;
+
+        .inicio-contenido h1 {
+            font-size: 60px;
+
+            color: #d94f82;
+
             margin-bottom: 15px;
+
+            transition: 0.4s;
         }
 
-        .inicio h3 {
-            font-size: 25px;
+
+        .inicio-contenido h1:hover {
+            transform: scale(1.05);
+            color: #b73567;
+        }
+
+
+        .inicio-contenido h2 {
+            font-size: 28px;
+
             margin-bottom: 20px;
+
+            color: #444;
         }
 
-        .inicio p {
+
+        .inicio-contenido p {
             font-size: 18px;
-            line-height: 1.6;
-            color: #555;
+
+            line-height: 1.7;
+
+            color: #666;
         }
+
+
+        /* BOTÓN */
 
         .boton {
             display: inline-block;
+
             margin-top: 30px;
-            padding: 13px 30px;
-            background-color: #d45d87;
+
+            padding: 15px 35px;
+
+            background-color: #d94f82;
+
             color: white;
+
             text-decoration: none;
-            border-radius: 25px;
+
+            border-radius: 30px;
+
             font-weight: bold;
+
+            transition: 0.3s;
         }
+
 
         .boton:hover {
-            background-color: #b9436d;
+            background-color: #b73567;
+
+            transform: translateY(-5px);
+
+            box-shadow: 0 10px 20px rgba(217, 79, 130, 0.3);
         }
 
-        /* SECCIONES */
+
+        /* -------------------------
+           SECCIONES
+        ------------------------- */
 
         section {
-            padding: 70px 10%;
+            padding: 80px 10%;
         }
 
-        section h2 {
+
+        .titulo {
             text-align: center;
-            color: #d45d87;
-            font-size: 35px;
-            margin-bottom: 40px;
+
+            font-size: 38px;
+
+            color: #d94f82;
+
+            margin-bottom: 45px;
         }
 
-        /* SOBRE MÍ */
+
+        /* -------------------------
+           SOBRE MÍ
+        ------------------------- */
+
+        #sobre-mi {
+            background-color: white;
+
+            text-align: center;
+        }
+
 
         .sobre-mi {
-            background-color: white;
-        }
+            max-width: 800px;
 
-        .sobre-mi-contenido {
-            max-width: 850px;
             margin: auto;
-            text-align: center;
+
+            font-size: 18px;
+
             line-height: 1.8;
-            font-size: 17px;
-        }
 
-        /* HABILIDADES */
-
-        .habilidades {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .habilidad {
-            background-color: white;
-            width: 200px;
-            padding: 25px;
-            text-align: center;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-        }
-
-        .habilidad h3 {
-            color: #d45d87;
-            margin-bottom: 10px;
-        }
-
-        /* PROYECTOS */
-
-        .proyectos {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-
-        .proyecto {
-            background-color: white;
-            width: 300px;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-        }
-
-        .proyecto h3 {
-            color: #d45d87;
-            margin-bottom: 15px;
-        }
-
-        .proyecto p {
-            line-height: 1.6;
             color: #555;
         }
 
-        /* ESTUDIOS */
 
-        .estudios {
-            background-color: white;
+        .sobre-mi:hover {
+            color: #333;
         }
 
-        .estudio {
-            max-width: 750px;
-            margin: 20px auto;
-            padding: 20px;
-            border-left: 5px solid #d45d87;
+
+        /* -------------------------
+           HABILIDADES
+        ------------------------- */
+
+        #habilidades {
             background-color: #fff5f8;
         }
 
-        .estudio h3 {
-            color: #d45d87;
-            margin-bottom: 8px;
+
+        .habilidades {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 25px;
+
+            flex-wrap: wrap;
         }
 
-        /* CONTACTO */
 
-        .contacto {
+        .habilidad {
+            background-color: white;
+
+            width: 220px;
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            border-radius: 20px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+            transition: 0.3s;
+        }
+
+
+        .habilidad:hover {
+            transform: translateY(-10px);
+
+            box-shadow: 0 15px 30px rgba(217, 79, 130, 0.25);
+
+            background-color: #fff0f5;
+        }
+
+
+        .habilidad h3 {
+            color: #d94f82;
+
+            margin-bottom: 15px;
+
+            font-size: 22px;
+        }
+
+
+        .habilidad p {
+            color: #666;
+
+            line-height: 1.5;
+        }
+
+
+        /* -------------------------
+           PROYECTOS
+        ------------------------- */
+
+        #proyectos {
+            background-color: white;
+        }
+
+
+        .proyectos {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 30px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .proyecto {
+            width: 300px;
+
+            padding: 30px;
+
+            border-radius: 20px;
+
+            background-color: #fff5f8;
+
+            border: 2px solid transparent;
+
+            transition: 0.3s;
+        }
+
+
+        .proyecto:hover {
+            transform: translateY(-10px) scale(1.02);
+
+            border-color: #d94f82;
+
+            box-shadow: 0 15px 30px rgba(217, 79, 130, 0.2);
+        }
+
+
+        .proyecto h3 {
+            color: #d94f82;
+
+            margin-bottom: 15px;
+
+            font-size: 22px;
+        }
+
+
+        .proyecto p {
+            line-height: 1.6;
+
+            color: #555;
+        }
+
+
+        .proyecto a {
+            display: inline-block;
+
+            margin-top: 20px;
+
+            color: #d94f82;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .proyecto a:hover {
+            color: #9e2853;
+
+            transform: translateX(5px);
+        }
+
+
+        /* -------------------------
+           FORMACIÓN
+        ------------------------- */
+
+        #formacion {
+            background-color: #fff5f8;
+        }
+
+
+        .formacion {
+            max-width: 800px;
+
+            margin: auto;
+        }
+
+
+        .estudio {
+            background-color: white;
+
+            padding: 25px;
+
+            margin-bottom: 20px;
+
+            border-left: 6px solid #d94f82;
+
+            border-radius: 10px;
+
+            transition: 0.3s;
+        }
+
+
+        .estudio:hover {
+            transform: translateX(10px);
+
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+
+        .estudio h3 {
+            color: #d94f82;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* -------------------------
+           CONTACTO
+        ------------------------- */
+
+        #contacto {
+            background-color: white;
+
             text-align: center;
         }
 
-        .contacto p {
-            margin: 10px;
+
+        .contacto-texto {
+            font-size: 18px;
+
+            line-height: 2;
+
+            color: #555;
         }
 
-        /* FOOTER */
+
+        .contacto-texto span {
+            color: #d94f82;
+
+            font-weight: bold;
+        }
+
+
+        /* -------------------------
+           FOOTER
+        ------------------------- */
 
         footer {
-            background-color: #d45d87;
+            background-color: #d94f82;
+
             color: white;
+
             text-align: center;
+
             padding: 25px;
         }
+
+
+        footer p {
+            transition: 0.3s;
+        }
+
+
+        footer p:hover {
+            transform: scale(1.05);
+        }
+
+
+        /* -------------------------
+           MÓVIL
+        ------------------------- */
 
         @media (max-width: 700px) {
 
             header {
                 flex-direction: column;
+
                 gap: 15px;
-                padding: 20px;
             }
+
 
             nav a {
                 margin: 8px;
             }
 
-            .inicio h2 {
-                font-size: 38px;
+
+            .inicio-contenido h1 {
+                font-size: 42px;
             }
+
+
+            .inicio-contenido h2 {
+                font-size: 22px;
+            }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
+
+    <!-- MENÚ -->
+
     <header>
 
-        <h1>Mi Portfolio 💗</h1>
+        <div class="logo">
+            Maren 💗
+        </div>
+
 
         <nav>
+
             <a href="#inicio">Inicio</a>
+
             <a href="#sobre-mi">Sobre mí</a>
+
             <a href="#habilidades">Habilidades</a>
+
             <a href="#proyectos">Proyectos</a>
+
+            <a href="#formacion">Formación</a>
+
             <a href="#contacto">Contacto</a>
+
         </nav>
 
     </header>
 
 
-    <main>
 
-        <!-- INICIO -->
+    <!-- INICIO -->
 
-        <section class="inicio" id="inicio">
+    <section id="inicio">
 
-            <div class="inicio-contenido">
+        <div class="inicio-contenido">
 
-                <h2>Hola, soy Maren</h2>
+            <h1>Hola, soy Maren 💗</h1>
 
-                <h3>Estudiante de Desarrollo de Aplicaciones Multiplataforma</h3>
+            <h2>Estudiante de Desarrollo de Aplicaciones Multiplataforma</h2>
+
+            <p>
+                Me apasiona la programación, aprender nuevas tecnologías
+                y crear proyectos que combinen creatividad y tecnología.
+            </p>
+
+
+            <a href="#proyectos" class="boton">
+                Ver mis proyectos
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SOBRE MÍ -->
+
+    <section id="sobre-mi">
+
+        <h2 class="titulo">
+            Sobre mí
+        </h2>
+
+
+        <div class="sobre-mi">
+
+            <p>
+                Soy estudiante de DAM y actualmente estoy desarrollando
+                mis conocimientos en programación, bases de datos y
+                desarrollo web.
+            </p>
+
+            <br>
+
+            <p>
+                Me considero una persona curiosa, creativa y con ganas
+                de aprender. Me gusta enfrentarme a nuevos retos y
+                descubrir diferentes formas de resolver problemas.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- HABILIDADES -->
+
+    <section id="habilidades">
+
+        <h2 class="titulo">
+            Mis habilidades
+        </h2>
+
+
+        <div class="habilidades">
+
+
+            <div class="habilidad">
+
+                <h3>☕ Java</h3>
 
                 <p>
-                    Estoy estudiando DAM y aprendiendo a desarrollar
-                    aplicaciones y soluciones informáticas. Me interesa
-                    especialmente la programación, las bases de datos
-                    y el desarrollo de aplicaciones.
+                    Programación orientada a objetos y desarrollo
+                    de aplicaciones.
                 </p>
 
-                <a href="#proyectos" class="boton">
-                    Ver mis proyectos
+            </div>
+
+
+            <div class="habilidad">
+
+                <h3>🐍 Python</h3>
+
+                <p>
+                    Algoritmos, programación y resolución
+                    de problemas.
+                </p>
+
+            </div>
+
+
+            <div class="habilidad">
+
+                <h3>🗄️ SQL</h3>
+
+                <p>
+                    Consultas, bases de datos, funciones y
+                    procedimientos.
+                </p>
+
+            </div>
+
+
+            <div class="habilidad">
+
+                <h3>🌐 HTML & CSS</h3>
+
+                <p>
+                    Creación y diseño de páginas web.
+                </p>
+
+            </div>
+
+
+            <div class="habilidad">
+
+                <h3>💻 C / C++</h3>
+
+                <p>
+                    Fundamentos de programación y estructuras.
+                </p>
+
+            </div>
+
+
+            <div class="habilidad">
+
+                <h3>🔧 GitHub</h3>
+
+                <p>
+                    Control de versiones y organización
+                    de proyectos.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PROYECTOS -->
+
+    <section id="proyectos">
+
+        <h2 class="titulo">
+            Mis proyectos
+        </h2>
+
+
+        <div class="proyectos">
+
+
+            <div class="proyecto">
+
+                <h3>☕ Aplicación Java</h3>
+
+                <p>
+                    Proyecto desarrollado en Java aplicando
+                    programación orientada a objetos.
+                </p>
+
+                <a href="#">
+                    Ver proyecto →
                 </a>
 
             </div>
 
-        </section>
 
+            <div class="proyecto">
 
-        <!-- SOBRE MÍ -->
-
-        <section class="sobre-mi" id="sobre-mi">
-
-            <h2>Sobre mí</h2>
-
-            <div class="sobre-mi-contenido">
+                <h3>🗄️ Base de datos</h3>
 
                 <p>
-                    Soy estudiante de Desarrollo de Aplicaciones
-                    Multiplataforma (DAM), con ganas de seguir
-                    aprendiendo y mejorando mis conocimientos en
-                    programación.
+                    Proyecto realizado con SQL utilizando
+                    consultas, funciones y procedimientos.
                 </p>
+
+                <a href="#">
+                    Ver proyecto →
+                </a>
+
+            </div>
+
+
+            <div class="proyecto">
+
+                <h3>🌸 Página web</h3>
 
                 <p>
-                    Me considero una persona curiosa, creativa y con
-                    facilidad para aprender cosas nuevas. Me gusta
-                    resolver problemas y descubrir cómo funcionan
-                    las aplicaciones y los sistemas.
+                    Página web desarrollada utilizando HTML
+                    y CSS, aplicando diferentes estilos.
                 </p>
 
-            </div>
-
-        </section>
-
-
-        <!-- HABILIDADES -->
-
-        <section id="habilidades">
-
-            <h2>Mis conocimientos</h2>
-
-            <div class="habilidades">
-
-                <div class="habilidad">
-                    <h3>Java</h3>
-                    <p>Programación orientada a objetos y desarrollo de aplicaciones.</p>
-                </div>
-
-                <div class="habilidad">
-                    <h3>Python</h3>
-                    <p>Programación y resolución de problemas mediante algoritmos.</p>
-                </div>
-
-                <div class="habilidad">
-                    <h3>SQL</h3>
-                    <p>Bases de datos, consultas y gestión de información.</p>
-                </div>
-
-                <div class="habilidad">
-                    <h3>HTML & CSS</h3>
-                    <p>Creación y diseño de páginas web.</p>
-                </div>
-
-                <div class="habilidad">
-                    <h3>C / C++</h3>
-                    <p>Fundamentos de programación y estructuras de datos.</p>
-                </div>
-
-                <div class="habilidad">
-                    <h3>GitHub</h3>
-                    <p>Control de versiones y gestión de proyectos.</p>
-                </div>
+                <a href="#">
+                    Ver proyecto →
+                </a>
 
             </div>
 
-        </section>
+
+        </div>
+
+    </section>
 
 
-        <!-- PROYECTOS -->
 
-        <section id="proyectos">
+    <!-- FORMACIÓN -->
 
-            <h2>Mis proyectos</h2>
+    <section id="formacion">
 
-            <div class="proyectos">
-
-                <div class="proyecto">
-
-                    <h3>🌸 Proyecto Java</h3>
-
-                    <p>
-                        Aplicación desarrollada en Java aplicando
-                        programación orientada a objetos.
-                    </p>
-
-                </div>
+        <h2 class="titulo">
+            Formación
+        </h2>
 
 
-                <div class="proyecto">
+        <div class="formacion">
 
-                    <h3>💗 Base de datos</h3>
-
-                    <p>
-                        Proyecto de bases de datos utilizando SQL,
-                        consultas, funciones y procedimientos.
-                    </p>
-
-                </div>
-
-
-                <div class="proyecto">
-
-                    <h3>💻 Página web</h3>
-
-                    <p>
-                        Diseño de una página web utilizando HTML
-                        y CSS, aplicando estructura y estilos.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ESTUDIOS -->
-
-        <section class="estudios">
-
-            <h2>Formación</h2>
 
             <div class="estudio">
 
-                <h3>Desarrollo de Aplicaciones Multiplataforma</h3>
+                <h3>🎓 Desarrollo de Aplicaciones Multiplataforma</h3>
 
                 <p>
                     Formación Profesional de Grado Superior — DAM
@@ -412,39 +773,61 @@
 
             <div class="estudio">
 
-                <h3>Bachillerato</h3>
+                <h3>📚 Bachillerato científico-biológico</h3>
 
                 <p>
-                    Bachillerato de modalidad científico-biológica.
+                    Formación previa a los estudios de Desarrollo
+                    de Aplicaciones Multiplataforma.
                 </p>
 
             </div>
 
-        </section>
+
+        </div>
+
+    </section>
 
 
-        <!-- CONTACTO -->
 
-        <section class="contacto" id="contacto">
+    <!-- CONTACTO -->
 
-            <h2>Contacto</h2>
+    <section id="contacto">
 
-            <p>📧 Email: tuemail@email.com</p>
+        <h2 class="titulo">
+            Contacto
+        </h2>
 
-            <p>💻 GitHub: github.com/tuusuario</p>
 
-            <p>📍 Donostia - San Sebastián</p>
+        <div class="contacto-texto">
 
-        </section>
+            <p>
+                📧 <span>Email:</span> tuemail@email.com
+            </p>
 
-    </main>
+            <p>
+                💻 <span>GitHub:</span> github.com/tuusuario
+            </p>
 
+            <p>
+                📍 <span>Ubicación:</span> Donostia
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
 
     <footer>
 
-        <p>© 2026 Maren | Portfolio de estudiante DAM 💗</p>
+        <p>
+            © 2026 Maren · Portfolio de estudiante DAM 💗
+        </p>
 
     </footer>
+
 
 </body>
 
