@@ -3,19 +3,14 @@
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Portfolio | Estudiante DAM</title>
 
-
     <style>
 
-        /* =========================
-           ESTILOS GENERALES
-        ========================= */
+        /* ESTILOS GENERALES */
 
         * {
             margin: 0;
@@ -23,718 +18,454 @@
             box-sizing: border-box;
         }
 
-
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 90px;
         }
-
 
         body {
             font-family: Arial, sans-serif;
-
             color: #333;
+            background-color: #fff0f5;
 
-            /* FONDO ROSA CLARO */
-            background-color: #ffeef4;
-
-            /*
-               ESTAMPADO DE LEOPARDO
-               EN ROSA CLARO
-            */
+            /* FONDO DE LEOPARDO ROSA */
 
             background-image:
-                radial-gradient(
-                    ellipse at center,
-                    transparent 25%,
-                    #eeb0c4 26%,
-                    #eeb0c4 34%,
-                    transparent 35%
-                ),
+                radial-gradient(ellipse 9px 13px at 20px 20px,
+                    #d98da8 90%, transparent 100%),
+                radial-gradient(ellipse 12px 7px at 44px 12px,
+                    #e4a0b7 90%, transparent 100%),
+                radial-gradient(ellipse 7px 11px at 53px 42px,
+                    #d98da8 90%, transparent 100%),
+                radial-gradient(ellipse 13px 8px at 15px 52px,
+                    #e4a0b7 90%, transparent 100%),
+                radial-gradient(ellipse 5px 8px at 36px 37px,
+                    #c97996 90%, transparent 100%),
+                radial-gradient(ellipse 10px 5px at 65px 25px,
+                    #e4a0b7 90%, transparent 100%);
 
-                radial-gradient(
-                    ellipse at center,
-                    transparent 25%,
-                    #f4bfd1 26%,
-                    #f4bfd1 34%,
-                    transparent 35%
-                ),
-
-                radial-gradient(
-                    circle at center,
-                    #f8cedc 0%,
-                    #f8cedc 18%,
-                    transparent 19%
-                );
-
-            background-size:
-                100px 100px,
-                130px 130px,
-                110px 110px;
-
-            background-position:
-                0 0,
-                45px 55px,
-                20px 20px;
-
+            background-size: 80px 70px;
             background-attachment: fixed;
         }
 
 
-        /* =========================
-           MENÚ
-        ========================= */
+        /* MENÚ */
 
         header {
-
-            background-color: rgba(255, 255, 255, 0.94);
-
+            background-color: rgba(255, 255, 255, 0.96);
             padding: 20px 8%;
-
             display: flex;
-
             justify-content: space-between;
-
             align-items: center;
-
             position: sticky;
-
             top: 0;
-
-            box-shadow:
-                0 3px 15px rgba(0, 0, 0, 0.08);
-
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
             z-index: 1000;
         }
 
-
         .logo {
-
             font-size: 25px;
-
             font-weight: bold;
-
             color: #d94f82;
-
             transition: 0.3s;
         }
 
-
         .logo:hover {
-
             color: #a82f5c;
-
             transform: scale(1.08);
         }
 
-
         nav a {
-
+            display: inline-block;
             text-decoration: none;
-
             color: #333;
-
-            margin-left: 25px;
-
+            margin-left: 20px;
             font-weight: bold;
-
             transition: 0.3s;
         }
 
-
         nav a:hover {
-
             color: #d94f82;
-
-            transform: translateY(-2px);
+            transform: translateY(-3px);
         }
 
 
-        /* =========================
-           INICIO
-        ========================= */
+        /* PRESENTACIÓN */
 
         #inicio {
-
             min-height: 90vh;
-
             display: flex;
-
             justify-content: center;
-
             align-items: center;
-
             text-align: center;
-
             padding: 40px;
-
-            /*
-               CAPA BLANCA TRANSPARENTE
-               PARA QUE SE VEA EL LEOPARDO
-            */
-
             background-color: rgba(255, 240, 246, 0.75);
         }
 
-
         .inicio-contenido {
-
             max-width: 800px;
-
-            background-color:
-                rgba(255, 255, 255, 0.82);
-
+            background-color: rgba(255, 255, 255, 0.94);
             padding: 50px;
-
             border-radius: 30px;
-
-            box-shadow:
-                0 15px 40px rgba(217, 79, 130, 0.15);
+            box-shadow: 0 15px 40px rgba(217, 79, 130, 0.18);
+            transition: 0.3s;
         }
 
+        .inicio-contenido:hover {
+            box-shadow: 0 20px 45px rgba(217, 79, 130, 0.27);
+        }
 
         .inicio-contenido h1 {
-
-            font-size: 60px;
-
+            font-size: 55px;
             color: #d94f82;
-
-            margin-bottom: 15px;
-
-            transition: 0.4s;
+            margin-bottom: 20px;
+            transition: 0.3s;
         }
-
 
         .inicio-contenido h1:hover {
-
-            transform: scale(1.05);
-
             color: #b73567;
+            transform: scale(1.04);
         }
 
-
         .inicio-contenido h2 {
-
-            font-size: 28px;
-
+            font-size: 25px;
             margin-bottom: 20px;
-
             color: #444;
         }
 
-
         .inicio-contenido p {
-
             font-size: 18px;
-
             line-height: 1.7;
-
             color: #666;
         }
 
 
-        /* =========================
-           BOTÓN
-        ========================= */
+        /* BOTÓN */
 
         .boton {
-
             display: inline-block;
-
             margin-top: 30px;
-
             padding: 15px 35px;
-
             background-color: #d94f82;
-
             color: white;
-
             text-decoration: none;
-
             border-radius: 30px;
-
             font-weight: bold;
-
             transition: 0.3s;
         }
 
-
         .boton:hover {
-
             background-color: #b73567;
-
             transform: translateY(-5px);
-
-            box-shadow:
-                0 10px 20px
-                rgba(217, 79, 130, 0.3);
+            box-shadow: 0 10px 20px rgba(217, 79, 130, 0.3);
         }
 
 
-        /* =========================
-           SECCIONES
-        ========================= */
+        /* TÍTULOS DE LAS SECCIONES */
 
         section {
-
             padding: 80px 10%;
         }
 
-
         .titulo {
-
             text-align: center;
-
             font-size: 38px;
-
             color: #d94f82;
-
             margin-bottom: 45px;
         }
 
 
-        /* =========================
-           SOBRE MÍ
-        ========================= */
+        /* SOBRE MÍ */
 
         #sobre-mi {
-
-            background-color:
-                rgba(255, 255, 255, 0.90);
-
+            background-color: rgba(255, 255, 255, 0.94);
             text-align: center;
         }
 
-
         .sobre-mi {
-
             max-width: 800px;
-
             margin: auto;
-
             font-size: 18px;
-
             line-height: 1.8;
-
             color: #555;
-
             transition: 0.3s;
         }
 
-
         .sobre-mi:hover {
-
             color: #333;
         }
 
 
-        /* =========================
-           HABILIDADES
-        ========================= */
+        /* HABILIDADES */
 
         #habilidades {
-
-            background-color:
-                rgba(255, 245, 248, 0.80);
+            background-color: rgba(255, 245, 248, 0.84);
         }
 
-
         .habilidades {
-
             display: flex;
-
             justify-content: center;
-
             gap: 25px;
-
             flex-wrap: wrap;
         }
 
-
         .habilidad {
-
-            background-color:
-                rgba(255, 255, 255, 0.94);
-
+            background-color: rgba(255, 255, 255, 0.96);
             width: 220px;
-
             padding: 30px 20px;
-
             text-align: center;
-
             border-radius: 20px;
-
-            box-shadow:
-                0 5px 20px
-                rgba(0, 0, 0, 0.08);
-
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
             transition: 0.3s;
         }
 
-
         .habilidad:hover {
-
-            transform:
-                translateY(-10px)
-                scale(1.03);
-
-            box-shadow:
-                0 15px 30px
-                rgba(217, 79, 130, 0.25);
-
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(217, 79, 130, 0.25);
             background-color: #fff0f5;
         }
 
-
         .habilidad h3 {
-
             color: #d94f82;
-
             margin-bottom: 15px;
-
             font-size: 22px;
         }
 
-
         .habilidad p {
-
             color: #666;
-
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
 
-        /* =========================
-           PROYECTOS
-        ========================= */
+        /* PROYECTOS */
 
         #proyectos {
-
-            background-color:
-                rgba(255, 255, 255, 0.90);
+            background-color: rgba(255, 255, 255, 0.94);
         }
 
-
         .proyectos {
-
             display: flex;
-
             justify-content: center;
-
             gap: 30px;
-
             flex-wrap: wrap;
         }
 
-
         .proyecto {
-
             width: 300px;
-
             padding: 30px;
-
             border-radius: 20px;
-
-            background-color:
-                rgba(255, 245, 248, 0.95);
-
+            background-color: #fff5f8;
             border: 2px solid transparent;
-
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: 0.3s;
         }
 
-
         .proyecto:hover {
-
-            transform:
-                translateY(-10px)
-                scale(1.02);
-
+            transform: translateY(-10px) scale(1.02);
             border-color: #d94f82;
-
-            box-shadow:
-                0 15px 30px
-                rgba(217, 79, 130, 0.20);
+            box-shadow: 0 15px 30px rgba(217, 79, 130, 0.2);
         }
 
-
         .proyecto h3 {
-
             color: #d94f82;
-
             margin-bottom: 15px;
-
             font-size: 22px;
         }
 
-
         .proyecto p {
-
-            line-height: 1.6;
-
+            line-height: 1.7;
             color: #555;
         }
 
-
         .proyecto a {
-
             display: inline-block;
-
             margin-top: 20px;
-
             color: #d94f82;
-
             text-decoration: none;
-
             font-weight: bold;
-
             transition: 0.3s;
         }
 
-
         .proyecto a:hover {
-
             color: #9e2853;
-
             transform: translateX(5px);
         }
 
 
-        /* =========================
-           FORMACIÓN
-        ========================= */
+        /* FORMACIÓN */
 
         #formacion {
-
-            background-color:
-                rgba(255, 245, 248, 0.80);
+            background-color: rgba(255, 245, 248, 0.84);
         }
 
-
         .formacion {
-
             max-width: 800px;
-
             margin: auto;
         }
 
-
         .estudio {
-
-            background-color:
-                rgba(255, 255, 255, 0.94);
-
+            background-color: rgba(255, 255, 255, 0.96);
             padding: 25px;
-
             margin-bottom: 20px;
-
             border-left: 6px solid #d94f82;
-
             border-radius: 10px;
-
             transition: 0.3s;
         }
 
-
         .estudio:hover {
-
             transform: translateX(10px);
-
-            box-shadow:
-                0 8px 20px
-                rgba(0, 0, 0, 0.08);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
         }
 
-
         .estudio h3 {
-
             color: #d94f82;
-
             margin-bottom: 10px;
         }
 
-
-        /* =========================
-           CONTACTO
-        ========================= */
-
-        #contacto {
-
-            background-color:
-                rgba(255, 255, 255, 0.90);
-
-            text-align: center;
-        }
-
-
-        .contacto-texto {
-
-            font-size: 18px;
-
-            line-height: 2;
-
+        .estudio p {
+            line-height: 1.6;
             color: #555;
         }
 
 
+        /* CONTACTO */
+
+        #contacto {
+            background-color: rgba(255, 255, 255, 0.94);
+            text-align: center;
+        }
+
+        .contacto-texto {
+            font-size: 18px;
+            line-height: 2;
+            color: #555;
+        }
+
         .contacto-texto span {
-
             color: #d94f82;
-
             font-weight: bold;
         }
 
-
         .contacto-texto p {
-
             transition: 0.3s;
         }
 
-
         .contacto-texto p:hover {
-
-            transform: scale(1.05);
-
+            transform: scale(1.04);
             color: #d94f82;
         }
 
 
-        /* =========================
-           FOOTER
-        ========================= */
+        /* PIE DE PÁGINA */
 
         footer {
-
             background-color: #d94f82;
-
             color: white;
-
             text-align: center;
-
             padding: 25px;
         }
 
-
         footer p {
-
             transition: 0.3s;
         }
 
-
         footer p:hover {
-
-            transform: scale(1.05);
+            transform: scale(1.03);
         }
 
 
-        /* =========================
-           RESPONSIVE
-        ========================= */
+        /* ADAPTACIÓN A MÓVILES */
 
-        @media (max-width: 700px) {
+        @media (max-width: 900px) {
 
             header {
-
                 flex-direction: column;
-
-                gap: 15px;
+                gap: 18px;
             }
 
-
             nav {
-
                 text-align: center;
             }
 
-
             nav a {
-
-                margin: 8px;
-
-                display: inline-block;
+                margin: 7px;
             }
-
-
-            .inicio-contenido {
-
-                padding: 30px 20px;
-            }
-
 
             .inicio-contenido h1 {
-
                 font-size: 42px;
             }
 
-
             .inicio-contenido h2 {
-
                 font-size: 22px;
             }
+        }
 
+        @media (max-width: 500px) {
+
+            section {
+                padding: 55px 6%;
+            }
+
+            .inicio-contenido {
+                padding: 30px 20px;
+            }
+
+            .inicio-contenido h1 {
+                font-size: 34px;
+            }
+
+            .titulo {
+                font-size: 30px;
+            }
+
+            .habilidad,
+            .proyecto {
+                width: 100%;
+            }
         }
 
     </style>
-
 </head>
 
 
 <body>
 
-
-    <!-- =========================
-         MENÚ
-    ========================= -->
+    <!-- MENÚ -->
 
     <header>
 
         <div class="logo">
-            Maren 
+            Maren 💗
         </div>
 
-
         <nav>
-
             <a href="#inicio">Inicio</a>
-
             <a href="#sobre-mi">Sobre mí</a>
-
             <a href="#habilidades">Habilidades</a>
-
             <a href="#proyectos">Proyectos</a>
-
             <a href="#formacion">Formación</a>
-
             <a href="#contacto">Contacto</a>
-
         </nav>
 
     </header>
 
 
-
-    <!-- =========================
-         INICIO
-    ========================= -->
+    <!-- PRESENTACIÓN -->
 
     <section id="inicio">
 
         <div class="inicio-contenido">
 
-            <h1>
-                Hola, soy Maren 
-            </h1>
-
+            <h1>Hola, soy Maren 💗</h1>
 
             <h2>
                 Estudiante de Desarrollo de Aplicaciones Multiplataforma
             </h2>
 
-
             <p>
                 Me apasiona la programación, aprender nuevas tecnologías
                 y crear proyectos que combinen creatividad y tecnología.
             </p>
-
 
             <a href="#proyectos" class="boton">
                 Ver mis proyectos
@@ -745,17 +476,11 @@
     </section>
 
 
-
-    <!-- =========================
-         SOBRE MÍ
-    ========================= -->
+    <!-- SOBRE MÍ -->
 
     <section id="sobre-mi">
 
-        <h2 class="titulo">
-            Sobre mí
-        </h2>
-
+        <h2 class="titulo">Sobre mí</h2>
 
         <div class="sobre-mi">
 
@@ -765,9 +490,7 @@
                 desarrollo web.
             </p>
 
-
             <br>
-
 
             <p>
                 Me considero una persona curiosa, creativa y con ganas
@@ -780,266 +503,150 @@
     </section>
 
 
-
-    <!-- =========================
-         HABILIDADES
-    ========================= -->
+    <!-- HABILIDADES -->
 
     <section id="habilidades">
 
-        <h2 class="titulo">
-            Mis habilidades
-        </h2>
-
+        <h2 class="titulo">Mis habilidades</h2>
 
         <div class="habilidades">
 
-
             <div class="habilidad">
-
-                <h3>
-                    ☕ Java
-                </h3>
-
+                <h3>☕ Java</h3>
                 <p>
                     Programación orientada a objetos y desarrollo
                     de aplicaciones.
                 </p>
-
             </div>
 
-
-
             <div class="habilidad">
-
-                <h3>
-                    🐍 Python
-                </h3>
-
+                <h3>🐍 Python</h3>
                 <p>
                     Algoritmos, programación y resolución
                     de problemas.
                 </p>
-
             </div>
 
-
-
             <div class="habilidad">
-
-                <h3>
-                    🗄️ SQL
-                </h3>
-
+                <h3>🗄️ SQL</h3>
                 <p>
                     Consultas, bases de datos, funciones y
                     procedimientos.
                 </p>
-
             </div>
 
-
-
             <div class="habilidad">
-
-                <h3>
-                    🌐 HTML & CSS
-                </h3>
-
+                <h3>🌐 HTML & CSS</h3>
                 <p>
                     Creación y diseño de páginas web.
                 </p>
-
             </div>
 
-
-
             <div class="habilidad">
-
-                <h3>
-                    💻 C / C++
-                </h3>
-
+                <h3>💻 C / C++</h3>
                 <p>
                     Fundamentos de programación y estructuras.
                 </p>
-
             </div>
-
-
 
             <div class="habilidad">
-
-                <h3>
-                    🔧 GitHub
-                </h3>
-
+                <h3>🔧 GitHub</h3>
                 <p>
-                    Control de versiones y organización
-                    de proyectos.
+                    Control de versiones y organización de proyectos.
                 </p>
-
             </div>
-
 
         </div>
 
     </section>
 
 
-
-    <!-- =========================
-         PROYECTOS
-    ========================= -->
+    <!-- PROYECTOS -->
 
     <section id="proyectos">
 
-        <h2 class="titulo">
-            Mis proyectos
-        </h2>
-
+        <h2 class="titulo">Mis proyectos</h2>
 
         <div class="proyectos">
 
-
             <div class="proyecto">
-
-                <h3>
-                    ☕ Aplicación Java
-                </h3>
-
+                <h3>☕ Aplicación Java</h3>
                 <p>
                     Proyecto desarrollado en Java aplicando
                     programación orientada a objetos.
                 </p>
-
-                <a href="#">
-                    Ver proyecto →
-                </a>
-
+                <a href="#">Ver proyecto →</a>
             </div>
 
-
-
             <div class="proyecto">
-
-                <h3>
-                    🗄️ Base de datos
-                </h3>
-
+                <h3>🗄️ Base de datos</h3>
                 <p>
                     Proyecto realizado con SQL utilizando
                     consultas, funciones y procedimientos.
                 </p>
-
-                <a href="#">
-                    Ver proyecto →
-                </a>
-
+                <a href="#">Ver proyecto →</a>
             </div>
 
-
-
             <div class="proyecto">
-
-                <h3>
-                    🌸 Página web
-                </h3>
-
+                <h3>🌸 Página web</h3>
                 <p>
                     Página web desarrollada utilizando HTML
                     y CSS, aplicando diferentes estilos.
                 </p>
-
-                <a href="#">
-                    Ver proyecto →
-                </a>
-
+                <a href="#">Ver proyecto →</a>
             </div>
-
 
         </div>
 
     </section>
 
 
-
-    <!-- =========================
-         FORMACIÓN
-    ========================= -->
+    <!-- FORMACIÓN -->
 
     <section id="formacion">
 
-        <h2 class="titulo">
-            Formación
-        </h2>
-
+        <h2 class="titulo">Formación</h2>
 
         <div class="formacion">
 
-
             <div class="estudio">
-
-                <h3>
-                    🎓 Desarrollo de Aplicaciones Multiplataforma
-                </h3>
-
+                <h3>🎓 Desarrollo de Aplicaciones Multiplataforma</h3>
                 <p>
-                    Formación Profesional de Grado Superior — DAM
+                    Formación Profesional de Grado Superior — DAM.
                 </p>
-
             </div>
 
-
-
             <div class="estudio">
-
-                <h3>
-                    📚 Bachillerato científico-biológico
-                </h3>
-
+                <h3>📚 Bachillerato científico-biológico</h3>
                 <p>
                     Formación previa a los estudios de Desarrollo
                     de Aplicaciones Multiplataforma.
                 </p>
-
             </div>
-
 
         </div>
 
     </section>
 
 
-
-    <!-- =========================
-         CONTACTO
-    ========================= -->
+    <!-- CONTACTO -->
 
     <section id="contacto">
 
-        <h2 class="titulo">
-            Contacto
-        </h2>
-
+        <h2 class="titulo">Contacto</h2>
 
         <div class="contacto-texto">
 
             <p>
-                📧 <span>Email:</span>
-                marencervo@centroseim.es
+                📧 <span>Email:</span> tuemail@email.com
             </p>
 
-
             <p>
-                💻 <span>GitHub:</span>
-                github.com/marenn6
+                💻 <span>GitHub:</span> github.com/tuusuario
             </p>
 
-
             <p>
-                📍 <span>Ubicación:</span>
-                Donostia
+                📍 <span>Ubicación:</span> Donostia
             </p>
 
         </div>
@@ -1047,10 +654,7 @@
     </section>
 
 
-
-    <!-- =========================
-         FOOTER
-    ========================= -->
+    <!-- PIE DE PÁGINA -->
 
     <footer>
 
@@ -1060,7 +664,6 @@
 
     </footer>
 
-
 </body>
-
 </html>
+```
